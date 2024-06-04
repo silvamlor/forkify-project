@@ -19,10 +19,6 @@ class AddingRecipeView extends View {
     this._addHandlerShowWindow();
     this._addHandlerHideWindow();
   }
-  // toggleWindow() {
-  //   this._overlay.classList.toggle('hidden');
-  //   this._window.classList.toggle('hidden');
-  // }
 
   _addHandlerShowWindow() {
     this._btnOpen.addEventListener('click', this.removeHiddenClass.bind(this));
@@ -92,7 +88,7 @@ class AddingRecipeView extends View {
     <input
       value=""
       required
-      name="cookingTime"
+      name="cooking_time"
       placeholder="In minutes"
       type="number"
     />
@@ -138,12 +134,12 @@ class AddingRecipeView extends View {
       </div>
     </div>
   </div>
-  
+
   <div class="upload__ingredient-buttons">
-    <button class="ingredient__btn ingredient__btn--plus">
+    <button class="ingredient__btn ingredient__btn--plus" type="button">
       <span>+</span>
     </button>
-    <button class="ingredient__btn ingredient__btn--minus">
+    <button class="ingredient__btn ingredient__btn--minus" type="button">
       <span>-</span>
     </button>
   </div>
@@ -171,21 +167,15 @@ class AddingRecipeView extends View {
   }
 
   addHandlerAddIngredient(handler) {
-    this._parentElement.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const plusBtn = document.querySelector('.ingredient__btn--plus');
-      const upload = e.upload;
-      if (upload !== plusBtn) return;
+    this._btnPlus.addEventListener('click', function (e) {
+      // e.preventDefault();
       handler();
     });
   }
 
   addHandlerRemoveIngredient(handler) {
-    this._parentElement.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const minusBtn = document.querySelector('.ingredient__btn--minus');
-      const upload = e.upload;
-      if (upload !== minusBtn) return;
+    this._btnMinus.addEventListener('click', function (e) {
+      // e.preventDefault();
       handler();
     });
   }
