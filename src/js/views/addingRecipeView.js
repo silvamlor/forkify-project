@@ -167,17 +167,19 @@ class AddingRecipeView extends View {
   }
 
   addHandlerAddIngredient(handler) {
-    this._btnPlus.addEventListener('click', function (e) {
-      // e.preventDefault();
-      handler();
-    });
+    document
+      .querySelector('.ingredient__btn--plus')
+      .addEventListener('click', function (e) {
+        handler();
+      });
   }
 
   addHandlerRemoveIngredient(handler) {
-    this._btnMinus.addEventListener('click', function (e) {
-      // e.preventDefault();
-      handler();
-    });
+    document
+      .querySelector('.ingredient__btn--minus')
+      .addEventListener('click', function (e) {
+        handler();
+      });
   }
 
   _generateIngredientHTML() {

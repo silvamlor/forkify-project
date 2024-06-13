@@ -114,6 +114,9 @@ const controlAddRecipe = async function (newRecipe) {
       addingRecipeView.render(model.state.recipe);
       addingRecipeView.setParentElementIngredients();
       addingRecipeView.displayCloseBtn('show');
+
+      addingRecipeView.addHandlerAddIngredient(controlAddIngredient);
+      addingRecipeView.addHandlerRemoveIngredient(controlRemoveIngredient);
     }, MODAL_CLOSE_SEC * 1000);
   }
 };
