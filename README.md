@@ -1,11 +1,4 @@
-# forkify-project-in-progress
+# forkify-project
 
-<<<<<<< HEAD
+Vanilla JavaScript app that interacts with forkify API to fetch and display recipe data. It utilizes HTML, CSS, and modern JavaScript tools. 
 
-# forkify-app-project
-
-# forkify-project-app
-
-=======
-
-> > > > > > > f2d10903034952b602a790457de1086160833e70
